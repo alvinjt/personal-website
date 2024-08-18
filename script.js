@@ -33,10 +33,7 @@ const handleScroll = () => {
 
     // Toggle sticky class on header
     header.classList.toggle('sticky', window.scrollY > 100);
-
-    // Remove menu icon and navbar when clicking on a nav link
-    document.querySelector('#menu-icon').classList.remove('bx-x');
-    document.querySelector('.navbar').classList.remove('active');
+    
 };
 
 window.addEventListener('scroll', handleScroll);
@@ -60,17 +57,3 @@ const initializeSwiper = () => {
 };
 
 initializeSwiper();
-
-// Initialize ScrollReveal
-const initializeScrollReveal = () => {
-    ScrollReveal({
-        distance: '80px',
-        duration: 2000,
-        delay: 200
-    }).reveal('.home-content, .heading', { origin: 'top' })
-        .reveal('.home-img, .skills-row, .services-container, .portfolio-box, .contact form, .about-content, .about-content h2', { origin: 'bottom' })
-        .reveal('.home-content h1, .about-img', { origin: 'left' })
-        .reveal('.home-content p', { origin: 'right' });
-};
-
-initializeScrollReveal();
